@@ -8,7 +8,9 @@ import { RegionModule } from './region/region.module';
 import { DistrictModule } from './district/district.module';
 import { RelationModule } from './relation/relation.module';
 import { GroupModule } from './group/group.module';
-import { ChatModule } from './chat/chat.module';
+import { EventModule } from './event/event.module';
+import { EventGuestsModule } from './event_guests/event_guests.module';
+import { InvitationModule } from './invitation/invitation.module';
 
 @Module({
   imports: [
@@ -21,7 +23,9 @@ import { ChatModule } from './chat/chat.module';
     DistrictModule,
     RelationModule,
     GroupModule,
-    ChatModule,
+    EventModule,
+    EventGuestsModule,
+    InvitationModule,
   ],
   controllers: [],
   providers: [],
