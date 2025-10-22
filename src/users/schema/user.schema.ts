@@ -1,5 +1,5 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
-import { HydratedDocument } from 'mongoose';
+import { HydratedDocument, Types } from 'mongoose';
 import { GenderEnum } from '../../common/enums/gender-enum';
 
 
@@ -39,6 +39,9 @@ export class Users {
 
     @Prop({ type: String, default: null })
     refresh_token: string | null;
+
+    @Prop({ type: [{ type: Types.ObjectId, ref: 'Chenel' }], default: [] })
+    chenel_Id: Types.ObjectId[];
 }
 
 export const UserSchema = SchemaFactory.createForClass(Users);
